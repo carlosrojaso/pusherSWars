@@ -1,12 +1,20 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      pusherSWars
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+  <ion-card>
+    <ion-img *ngIf="character?.image" src="{{ character?.image }}"></ion-img>
+  
+    <ion-card-content>
+      <ion-card-title text-center>{{ character?.name }}</ion-card-title>
+      <p><b>Height: </b> {{ character?.height }}</p>
+      <p><b>Mass: </b> {{ character?.mass }}</p>
+      <p text-center><ion-button shape="round" color="primary" fill="outline">Shuffle</ion-button> <ion-button shape="round" color="dark" fill="outline">Save</ion-button></p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
