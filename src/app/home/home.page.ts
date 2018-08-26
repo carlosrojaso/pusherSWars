@@ -19,9 +19,13 @@ export class HomePage {
   }
 
   initialize() {
+  this.getCharacter();
+  }
+
+  getCharacter(): void {
     this.swapiService.getCharacter().subscribe(
       (people) => {
-        this.character = { name: people.name, height: people.height, mass: people.mass };
+        this.character = { name: people.name, height: people.height, mass: people.mass, image: ''};
         console.log(this.character);
 
         // Getting Image
@@ -33,6 +37,10 @@ export class HomePage {
         );
       }
     );
+  }
+
+  shuffle() {
+    this.getCharacter();
   }
 
 }

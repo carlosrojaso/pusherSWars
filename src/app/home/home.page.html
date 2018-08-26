@@ -14,7 +14,7 @@
       <ion-card-title text-center>{{ character?.name }}</ion-card-title>
       <p><b>Height: </b> {{ character?.height }}</p>
       <p><b>Mass: </b> {{ character?.mass }}</p>
-      <p text-center><ion-button shape="round" color="primary" fill="outline">Shuffle</ion-button> <ion-button shape="round" color="dark" fill="outline">Save</ion-button></p>
+      <p text-center><ion-button (click)="shuffle()" shape="round" color="primary" fill="outline">Shuffle</ion-button> <ion-button shape="round" color="dark" fill="outline">Save</ion-button></p>
     </ion-card-content>
   </ion-card>
 </ion-content>

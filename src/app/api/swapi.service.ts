@@ -19,7 +19,7 @@ export class SwapiService {
   }
 
   getCharacterImage(name): Observable<any> {
-    const proximityQuery = name + 'Star Wars Character';
+    const proximityQuery = name + 'StarWars';
     const requestURL = `${this.giphyUrl}?api_key=${this.giphyApiKey}&q=${proximityQuery}`;
     return this.http.get(requestURL);
   }
